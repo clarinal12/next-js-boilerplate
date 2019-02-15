@@ -85,7 +85,7 @@ var Footer = function Footer(props) {
       marginTop: 30
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "STAY WITH ME"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Join this shit right now. Or else..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
-    lg: 10,
+    lg: 9,
     className: "padding-0"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["InputGroup"], {
     className: "mb-3"

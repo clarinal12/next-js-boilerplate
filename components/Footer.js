@@ -22,7 +22,7 @@ const Footer = props => {
         <Col sm={12} md={6} lg={4} style={{ marginTop: 30 }}>
           <h5>STAY WITH ME</h5>
           <p>Join this shit right now. Or else...</p>
-          <Col lg={10} className="padding-0">
+          <Col lg={9} className="padding-0">
             <Form>
               <InputGroup className="mb-3">
                 <FormControl placeholder="Email Address" required />
