@@ -1,0 +1,36 @@
+body {
+  background-color: #efefef; }
+
+.header .dropdown-menu {
+  left: -30px; }
+
+.body {
+  min-height: -webkit-calc(100vh - 462px - 56px);
+  min-height: -moz-calc(100vh - 462px - 56px);
+  min-height: calc(100vh - 462px - 56px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fff; }
+
+.footer {
+  background-color: #f4f6f9;
+  padding: 50px 30px 30px 30px; }
+  .footer .navigation-list {
+    list-style-type: none;
+    padding: 0; }
+    .footer .navigation-list li {
+      padding-bottom: 10px; }
+
+.padding-0 {
+  padding: 0; }
+
+.margin-0 {
+  margin: 0; }
+
+.text-center {
+  text-align: center; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/
