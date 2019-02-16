@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const HeadTag = () => (
   <Head>
-    <title>My page title</title>
+    <title>NextJS Boilerplate</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <link
       rel="stylesheet"
@@ -20,7 +20,6 @@ const HeadTag = () => (
       crossOrigin
     />
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
-    <script>var Alert = ReactBootstrap.Alert;</script>
   </Head>
 );
 
