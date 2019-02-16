@@ -3,18 +3,23 @@ import React from "react";
 /**
  * Configs
  */
-import sideNavConfig from "../web-app-configs/side-nav-config";
+import sideNavItems from "../web-app-configs/side-nav-config";
 
 /**
  * React Bootstrap
  */
-import { Button } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 
 /**
  * FontAwesome
  */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCoffee } from "@fortawesome/free-solid-svg-icons";
+
+/**
+ * Components
+ */
+import SideNavItem from "./SideNavItem";
 
 export default class SideNav extends React.Component {
   state = {
@@ -27,7 +32,7 @@ export default class SideNav extends React.Component {
 
   render() {
     const { open } = this.state;
-    console.log(sideNavConfig);
+
     return (
       <div className={`side-nav ${open ? "open" : ""}`}>
         <Button
@@ -37,6 +42,20 @@ export default class SideNav extends React.Component {
         >
           <FontAwesomeIcon icon={faBars} />
         </Button>
+        <div className="side-nav-icons-panel">
+          {sideNavItems.map((item, index) => (
+            <Nav.Link key={index} href="#">
+              <FontAwesomeIcon icon={faCoffee} />
+            </Nav.Link>
+          ))}
+        </div>
+        <div className={`side-nav-items-panel ${open ? "open" : ""}`}>
+          {sideNavItems.map((item, index) => (
+            <Nav.Link key={index} href="#">
+              {item.name}
+            </Nav.Link>
+          ))}
+        </div>
       </div>
     );
   }

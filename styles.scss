@@ -12,10 +12,8 @@ body {
 }
 
 .side-nav {
-  width: 250px;
   background-color: #fff;
   position: relative;
-  transition: 0.5s;
 
   .side-nav-toggle {
     position: absolute;
@@ -23,8 +21,28 @@ body {
     top: 5px;
   }
 
-  &.open {
+  .nav-link {
+    padding: 10px 15px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .side-nav-icons-panel {
     width: 50px;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+  }
+
+  .side-nav-items-panel {
+    width: 200px;
+    height: 100%;
+    padding-left: 35px;
+    margin-left: -150px;
+    transition: 0.2s;
+
+    &.open {
+      margin-left: 0;
+    }
   }
 }
 
