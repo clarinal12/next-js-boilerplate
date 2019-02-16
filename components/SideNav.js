@@ -1,6 +1,11 @@
 import React from "react";
 
 /**
+ * Configs
+ */
+import sideNavConfig from "../web-app-configs/side-nav-config";
+
+/**
  * React Bootstrap
  */
 import { Button } from "react-bootstrap";
@@ -22,7 +27,7 @@ export default class SideNav extends React.Component {
 
   render() {
     const { open } = this.state;
-    console.log(open);
+    console.log(sideNavConfig);
     return (
       <div className={`side-nav ${open ? "open" : ""}`}>
         <Button
