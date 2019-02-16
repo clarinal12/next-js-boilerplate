@@ -14,7 +14,7 @@ import fetch from "isomorphic-unfetch";
 import Layout from "../components/CoreLayout";
 
 const Index = props => (
-  <Layout>
+  <Layout pageTitle="Home" pageSubTitle="The page's subtitle is written here.">
     <h1>Batman TV Shows</h1>
     <ul>
       {props.shows.map(({ show }) => (

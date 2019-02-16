@@ -4,15 +4,23 @@ body {
 .header .dropdown-menu {
   left: -30px; }
 
+.side-nav {
+  width: 250px;
+  background-color: #fff;
+  position: relative;
+  transition: 0.5s; }
+  .side-nav .side-nav-toggle {
+    position: absolute;
+    right: -45px;
+    top: 5px; }
+  .side-nav.open {
+    width: 50px; }
+
 .body {
   min-height: -webkit-calc(100vh - 462px - 56px);
   min-height: -moz-calc(100vh - 462px - 56px);
   min-height: calc(100vh - 462px - 56px);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background-color: #fff; }
+  display: flex; }
 
 .footer {
   background-color: #f4f6f9;

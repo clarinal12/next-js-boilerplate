@@ -4,7 +4,7 @@
 import "../styles.scss";
 
 /**
- * React Bootstrap
+ * ReactBoostrap
  */
 import { Container } from "react-bootstrap";
 
@@ -13,13 +13,14 @@ import { Container } from "react-bootstrap";
  */
 import Head from "./Head";
 import Header from "./Header";
+import Body from "./Body";
 import Footer from "./Footer";
 
 const CoreLayout = props => (
   <div className="root">
     <Head />
     <Header />
-    <Container className="body">{props.children}</Container>
+    <Body {...props}>{props.children}</Body>
     <Footer />
   </div>
 );
