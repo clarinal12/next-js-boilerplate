@@ -1,0 +1,22 @@
+.body {
+  height: -webkit-calc(100vh - #{$header-height});
+  height: -moz-calc(100vh - #{$header-height});
+  height: calc(100vh - #{$header-height});
+  display: flex;
+  position: relative;
+
+  .container {
+    height: 100%;
+
+    .card {
+      max-height: 100%;
+      top: 80px;
+      bottom: 0px;
+      position: sticky;
+
+      .card-body {
+        overflow-y: scroll;
+      }
+    }
+  }
+}

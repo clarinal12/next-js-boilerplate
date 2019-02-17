@@ -1,35 +1,60 @@
 import { Modal, Button } from "react-bootstrap";
 
-const AppModal = props => {
-  return (
-    <Modal
-      show={true}
-      onHide={() => {}}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={() => {}}>
-          Close
+const renderFooter = props => {
+  const { type, toggle, onConfirm, onCancel, variant } = props;
+  if (type == "confirm") {
+    return (
+      <Modal.Footer className={type == "confirm" && "confirm"}>
+        <Button variant="secondary" onClick={toggle}>
+          Cancel
         </Button>
-        <Button variant="primary" onClick={() => {}}>
-          Save Changes
+        <Button variant="primary" onClick={onConfirm}>
+          OK
         </Button>
       </Modal.Footer>
+    );
+  } else if (type == "alert") {
+    return (
+      <Modal.Footer className={type == "alert" && "alert-dialog"}>
+        <Button variant="primary" onClick={toggle}>
+          OK
+        </Button>
+      </Modal.Footer>
+    );
+  }
+};
+
+const AppModal = props => {
+  const {
+    show,
+    toggle,
+    size,
+    onConfirm,
+    onCancel,
+    type,
+    backdrop,
+    variant,
+    title
+  } = props;
+
+  return (
+    <Modal
+      show={show}
+      onHide={toggle}
+      size={size}
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+      backdrop={backdrop || true}
+    >
+      <Modal.Header closeButton>
+        {title && (
+          <Modal.Title id="contained-modal-title-vcenter">
+            Modal heading
+          </Modal.Title>
+        )}
+      </Modal.Header>
+      <Modal.Body>{props.children}</Modal.Body>
+      {renderFooter(props)}
     </Modal>
   );
 };

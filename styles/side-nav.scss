@@ -1,0 +1,44 @@
+.side-nav {
+  background-color: #fff;
+  position: relative;
+  width: 200px;
+  margin-left: -150px;
+  transition: 0.3s;
+  height: -webkit-calc(100vh - #{$header-height});
+  height: -moz-calc(100vh - #{$header-height});
+  height: calc(100vh - #{$header-height});
+  z-index: 1;
+
+  @media only screen and (max-width: 425px) {
+    position: absolute;
+    margin-left: -200px;
+  }
+
+  .links {
+    max-height: 100%;
+    top: 56px;
+    bottom: 0px;
+    position: sticky;
+    overflow-y: scroll;
+  }
+
+  &.open {
+    margin-left: 0;
+  }
+
+  .side-nav-toggle {
+    position: absolute;
+    right: -45px;
+    top: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .nav-link {
+    padding: 10px 15px;
+    color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}

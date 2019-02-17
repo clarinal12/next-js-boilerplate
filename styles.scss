@@ -1,72 +1,12 @@
-$footer-height: 462px;
-$header-height: 56px;
-
-body {
-  background-color: #efefef;
-  margin-top: 56px;
-}
-
-.header {
-  .dropdown-menu {
-    left: -30px;
-  }
-}
-
-.side-nav {
-  background-color: #fff;
-  position: relative;
-
-  .side-nav-toggle {
-    position: absolute;
-    right: -45px;
-    top: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-
-  .nav-link {
-    padding: 10px 15px;
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  .side-nav-icons-panel {
-    width: 50px;
-    height: 100%;
-    position: absolute;
-    background-color: #fff;
-  }
-
-  .side-nav-items-panel {
-    width: 200px;
-    height: 100%;
-    padding-left: 35px;
-    margin-left: -150px;
-    transition: 0.3s;
-
-    &.open {
-      margin-left: 0;
-    }
-  }
-}
-
-.body {
-  min-height: -webkit-calc(100vh - #{$footer-height} - #{$header-height});
-  min-height: -moz-calc(100vh - #{$footer-height} - #{$header-height});
-  min-height: calc(100vh - #{$footer-height} - #{$header-height});
-  display: flex;
-}
-
-.footer {
-  background-color: #f4f6f9;
-  padding: 50px 30px 30px 30px;
-
-  .navigation-list {
-    list-style-type: none;
-    padding: 0;
-    li {
-      padding-bottom: 10px;
-    }
-  }
-}
+//variables.scss should go first
+@import "/styles/variables.scss";
+@import "/styles/body.scss";
+@import "/styles/core.scss";
+@import "/styles/footer.scss";
+@import "/styles/header.scss";
+@import "/styles/modal.scss";
+@import "/styles/side-nav.scss";
+@import "/styles/modal.scss";
 
 .padding-0 {
   padding: 0;

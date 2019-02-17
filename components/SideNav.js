@@ -8,13 +8,20 @@ import sideNavItems from "../web-app-configs/side-nav-config";
 /**
  * React Bootstrap
  */
-import { Button, Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
+import {
+  Button,
+  Nav,
+  OverlayTrigger,
+  Tooltip,
+  Row,
+  Col
+} from "react-bootstrap";
 
 /**
  * FontAwesome
  */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default class SideNav extends React.Component {
   state = {
@@ -25,7 +32,7 @@ export default class SideNav extends React.Component {
     this.setState({ open: !this.state.open });
   };
 
-  renderNavIcons = item => {
+  renderNavIcon = item => {
     if (this.state.open) {
       return <FontAwesomeIcon icon={item.icon} />;
     } else {
@@ -50,20 +57,15 @@ export default class SideNav extends React.Component {
           className="side-nav-toggle"
           variant="light"
         >
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={open ? faArrowLeft : faArrowRight} />
         </Button>
-
-        <div className="side-nav-icons-panel">
+        <div className="links">
           {sideNavItems.map((item, index) => (
             <Nav.Link key={index} href={item.link}>
-              {this.renderNavIcons(item)}
-            </Nav.Link>
-          ))}
-        </div>
-        <div className={`side-nav-items-panel ${open ? "open" : ""}`}>
-          {sideNavItems.map((item, index) => (
-            <Nav.Link key={index} href={item.link}>
-              {item.name}
+              <Row>
+                <Col xs={9}>{item.name}</Col>
+                <Col xs={3}>{this.renderNavIcon(item)}</Col>
+              </Row>
             </Nav.Link>
           ))}
         </div>

@@ -1,0 +1,22 @@
+.modal {
+  .modal-footer {
+    padding: 0px;
+
+    &.confirm {
+      button {
+        width: 50%;
+        border-radius: 0;
+        margin: 0;
+        padding: 12px 0;
+      }
+    }
+    &.alert-dialog {
+      button {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 12px 0;
+      }
+    }
+  }
+}
