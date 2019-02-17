@@ -1,7 +1,7 @@
 /**
- * NextJs
+ * Configs
  */
-import Link from "next/link";
+import headerNavItems from "../web-app-configs/header-nav-config";
 
 /**'
  * React Bootstrap
@@ -10,7 +10,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Header = () => (
   <div className="header">
-    <Navbar bg="light" expand="lg">
+    <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
       <Navbar.Brand href="/">
         <img
           alt=""
@@ -24,8 +24,11 @@ const Header = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="#link">Link</Nav.Link>
+          {headerNavItems.map((item, index) => (
+            <Nav.Link key={index} href={item.link}>
+              {item.name}
+            </Nav.Link>
+          ))}
         </Nav>
         <Nav>
           <Navbar.Text>Signed in as: </Navbar.Text>

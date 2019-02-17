@@ -1,8 +1,8 @@
 import Layout from "../components/CoreLayout";
 
 const About = () => (
-  <Layout>
-    <p>This is about page.</p>
+  <Layout pageTitle="About" pageSubTitle="The page's subtitle is written here.">
+    <h1>About Page Information</h1>
   </Layout>
 );
 

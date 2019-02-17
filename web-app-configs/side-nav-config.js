@@ -1,15 +1,20 @@
+import { faCoffee, faRocket, faTree } from "@fortawesome/free-solid-svg-icons";
+
 const config = [
   {
     name: "Dashboard",
-    link: "#dasboard"
+    link: "/dashboard",
+    icon: faCoffee
   },
   {
-    name: "Item 1",
-    link: "#item1"
+    name: "About",
+    link: "/about",
+    icon: faRocket
   },
   {
-    name: "Item 2",
-    link: "#item2"
+    name: "Contact",
+    link: "/contact",
+    icon: faTree
   }
 ];
 
