@@ -52,13 +52,15 @@ export default class SideNav extends React.Component {
 
     return (
       <div className={`side-nav ${open ? "open" : ""}`}>
-        <Button
-          onClick={this.toggleNav}
-          className="side-nav-toggle"
-          variant="light"
-        >
-          <FontAwesomeIcon icon={open ? faArrowLeft : faArrowRight} />
-        </Button>
+        <div className="side-nav-toggle-wrapper">
+          <Button
+            onClick={this.toggleNav}
+            className="side-nav-toggle"
+            variant="light"
+          >
+            <FontAwesomeIcon icon={open ? faArrowLeft : faArrowRight} />
+          </Button>
+        </div>
         <div className="links">
           {sideNavItems.map((item, index) => (
             <Nav.Link key={index} href={item.link}>

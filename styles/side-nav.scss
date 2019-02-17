@@ -19,18 +19,24 @@
     top: 56px;
     bottom: 0px;
     position: sticky;
-    overflow-y: scroll;
   }
 
   &.open {
     margin-left: 0;
   }
 
-  .side-nav-toggle {
+  .side-nav-toggle-wrapper {
     position: absolute;
     right: -45px;
     top: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    height: 100%;
+
+    .side-nav-toggle {
+      position: sticky;
+      top: 61px;
+      bottom: 0px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
   }
 
   .nav-link {
